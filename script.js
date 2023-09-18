@@ -1,41 +1,61 @@
-let leftButton = document.querySelector('.button_left')
-let rightButton = document.querySelector('.button_right')
+let leftButton = document.querySelector('.button-left')
+let rightButton = document.querySelector('.button-right')
 let leftEdgeSlide = 5;
 let rightEdgeSlide = 4;
 
 function createNextSlide (slideNumber) {
-  let carousel = document.querySelector('.carousel');
+  let carousel = document.querySelector('.carousel__inner');
   let createdSlide = document.createElement('div');
-  let deletedSlide = document.querySelector('.item_' + slideNumber);
+  let deletedSlide = document.querySelector('.carousel-item-' + slideNumber);
   let createdText = document.createElement('p');
-  let swappedText = document.querySelector('.text_' + slideNumber).textContent;
+  let swappedText = document.querySelector('.carousel-text-' + slideNumber).textContent;
   
-  // creating slide
+  carousel.animate(
+    [
+      { transform: "translateX(520px)" },
+      { transform: "translateX(0px)" },
+    ],
+    {
+      duration: 1200,
+      iterations: 1,
+    },
+  );
+
   carousel.append(createdSlide);
   createdSlide.appendChild(createdText);
-  createdSlide.classList.add('carousel_item');
-  createdText.classList.add('carousel_text');
+  createdSlide.classList.add('carousel__item');
+  createdText.classList.add('carousel__text');
   createdText.textContent = swappedText;
-  createdSlide.classList.add('item_' + (slideNumber)); 
-  createdText.classList.add('text_' + (slideNumber));
+  createdSlide.classList.add('carousel-item-' + (slideNumber)); 
+  createdText.classList.add('carousel-text-' + (slideNumber));
   deletedSlide.remove();
 }
 
 function createPrevSlide (slideNumber) {
-  let carousel = document.querySelector('.carousel');
+  let carousel = document.querySelector('.carousel__inner');
   let createdSlide = document.createElement('div');
-  let deletedSlide = document.querySelector('.item_' + slideNumber);
+  let deletedSlide = document.querySelector('.carousel-item-' + slideNumber);
   let createdText = document.createElement('p');
-  let swappedText = document.querySelector('.text_' + slideNumber).textContent;
+  let swappedText = document.querySelector('.carousel-text-' + slideNumber).textContent;
   
-  // creating slide
+  carousel.animate(
+    [
+      { transform: "translateX(-520px)" },
+      { transform: "translateX(0px)" },
+    ],
+    {
+      duration: 1200,
+      iterations: 1,
+    },
+  );
+
   carousel.prepend(createdSlide);
   createdSlide.appendChild(createdText);
-  createdSlide.classList.add('carousel_item');
-  createdText.classList.add('carousel_text');
+  createdSlide.classList.add('carousel__item');
+  createdText.classList.add('carousel__text');
   createdText.textContent = swappedText;
-  createdSlide.classList.add('item_' + (slideNumber)); 
-  createdText.classList.add('text_' + (slideNumber));
+  createdSlide.classList.add('carousel-item-' + (slideNumber)); 
+  createdText.classList.add('carousel-text-' + (slideNumber));
   deletedSlide.remove();
 }
 

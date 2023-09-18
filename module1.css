@@ -1,0 +1,328 @@
+@font-face {
+    font-family: "TT Travels";
+    font-weight: 400;
+    font-style: normal;
+    src: url(TT_Travels/TTTravels-Regular.woff2) format(woff2),
+         url(TT_Travels/TTTravels-Regular.woff) format(woff);
+}
+@font-face {
+    font-family: "TT Travels";
+    font-weight: 500;
+    font-style: normal;
+    src: url(TT_Travels/TTTravels-Medium.woff2) format(woff2),
+         url(TT_Travels/TTTravels-Medium.woff) format(woff);
+}
+@font-face {
+    font-family: "DaysOne";
+    font-weight: 400;
+    font-style: normal;
+    src: url(DaysOne-Regular.ttf) format(ttf);
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1240px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.one-column {
+    grid-column: 1 / 13;
+}
+.left-half {
+    grid-column: 1 / 7;
+}
+.right-half {
+    grid-column: 7 / 13;
+}
+.left-third {
+    grid-column: 1 / 5;
+}
+.mid-third {
+    grid-column: 5 / 9;
+}
+.right-third {
+    grid-column: 9 / 13;
+}
+.left-two-thirds {
+    grid-column: 1 / 9;
+}
+.right-two-thirds {
+    grid-column: 5 / 13;
+}
+.rear-left-fourth {
+    grid-column: 1 / 4;
+}
+.left-fourth {
+    grid-column: 4 / 7;
+}
+.bordered-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 18px;
+    font-family: "TT Travels", sans-serif;
+    font-size: 24px;
+    border-radius: 13px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.10);
+}
+p {
+    color: #0e0e0e;
+    margin: 0;
+    font-family: "TT Travels";
+    font-size: 24px;
+    font-weight: 400;
+}
+.heading {
+    font-size: 48px;
+    font-family: 'TT Travels';
+    color: #0e0e0e;
+    margin: 0;
+    margin-top: 150px;
+    grid-column: 1 / 13;
+}
+.semi-bold-blue {
+    font-weight: 500;
+    color: #0059DF;
+}
+.semi-bold-red {
+    font-weight: 500;
+    color: #DB0D27;
+}
+.semi-bold {
+    font-weight: 500;
+}
+.bold-blue {
+    color: #0059df;
+    font-weight: 700;
+}
+.bold-red {
+    color: #DB0D27;
+    font-weight: 700;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.subject {
+    position: relative;
+}
+.subject__image {
+    width: 100%;
+}
+.subject__aside {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    font-size: 16px;
+    text-align: right;
+}
+
+.basics__aside {
+    margin-top: auto;
+    color: #676767;
+    font-size: 16px;
+}
+.basics__image {
+    margin: 0;
+    margin-top: 20px;
+}
+.example {
+    margin: 0;
+    padding: 160px 0;
+    background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(img/pizza_time.png);
+    background-position: -20% -50%;
+    background-repeat: repeat-x;
+}
+.attraction__image {
+    margin: auto 0;
+}
+.attraction__icon {
+    grid-column: 1 / 3;
+    margin: auto;
+}
+.attraction__item {
+    grid-column: 3 / 13;
+}
+.principles__item {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+}
+.principles__number {
+    position: absolute;
+    top: 15%;
+    grid-column: 1 / 4;
+}
+.principles__text {
+    grid-column: 2 / 7;
+    margin: auto;
+}
+.carousel__heading {
+    margin: auto;
+    margin-top: 150px;
+    max-width: 1240px;
+}
+.carousel__inner {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.carousel__item {
+    position: relative;
+    left: -475px;
+    box-sizing: border-box;
+    display: flex;
+    min-width: 505px;
+    max-width: 505px;
+    min-height: 362px;
+    border-radius: 13px;
+    background-color: #0059DF;
+}
+.carousel__text {
+    display: block;
+    margin: auto;
+    padding: 25px;
+    color: #ffffff;
+}
+.carousel__controls {
+    display: flex;
+    justify-content: center;
+}
+.carousel__button {
+    margin-top: 30px;
+    color:#0059DF;
+    background: none;
+    border: none;
+    width: 50px;
+    height: 75px;
+}
+.carousel__button:hover svg{
+    color: black;
+    cursor: pointer;
+}
+.carousel__button + .carousel__button {
+    margin-left: 20px;
+}
+.advice__card {
+    height: 360px;
+    border-radius: 13px;
+    background-color: #0059DF;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.advice__text {
+    margin: auto 15px;
+    color: #ffffff;
+}
+.card-5 {
+    grid-column: 4 / 9;
+}
+.advice__number {
+    position: absolute;
+    right: -3%;
+    top: 40%;
+}
+.audience__number {
+    margin: auto;
+    grid-column: 1 / 2;
+}
+.audience__text-numbered {
+    grid-column: 2 / 13;
+}
+.horizontal-line {
+    grid-column: 1 / 13;
+    height: 1px;
+    border-bottom: 1px solid #0059DF;
+}
+.analysis__col:nth-of-type(2) {
+    position: relative;
+    overflow: hidden;
+}
+.analysis__col-background {
+    position: absolute;
+    right: 0%;
+    top: 25%;
+}
+.mistakes__cross {
+    grid-column: 1 / 2;
+    margin: auto;
+}
+.mistakes__text {
+    grid-column: 2 / 13;
+}
+.offer__formula {
+    font-size: 36px;
+    grid-column: 1 / 13;
+}
+.centered {
+    text-align: center;
+}
+.usage {
+    margin-top: 150px;
+}
+.usage__col {
+    position: relative;
+}
+.usage__text {
+    margin-bottom: 60px;
+}
+.tick {
+    position: absolute;
+    bottom: 2%;
+    right: 1%;
+}
+.table {
+    margin-top: 30px;
+}
+.readlist {
+    background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(img/book.png);
+    background-position: -10% -5%;
+    background-repeat: repeat-x;
+}
+.readlist__item:nth-of-type(1) {
+    margin-top: 30px;
+}
+.readlist__item {
+    line-height: 52px;
+}
+.readlist__item:nth-of-type(7) {
+    line-height: 30px;
+}
+nav {
+    margin-top: 50px;
+    background-image: url(img/nav_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 432px;
+}
+.nav-button {
+    margin-top: 80px;
+    margin-bottom: 150px; 
+    width: 400px;
+    border: none;
+    background: none;
+}
+.nav-button-img {
+    width: 100%;
+}
