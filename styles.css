@@ -18,7 +18,12 @@
     font-style: normal;
     src: url(DaysOne-Regular.ttf) format(ttf);
 }
-
+html {
+	overflow-x: hidden;
+}
+body {
+	margin: 0;
+}
 .wrapper {
     margin: 0 auto;
     max-width: 1240px;
@@ -144,8 +149,8 @@ p {
     margin: 0;
     padding: 160px 0;
     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(img/pizza_time.png);
-    background-position: -20% -50%;
-    background-repeat: repeat-x;
+    background-position: -10% -50%;
+    background-repeat: no-repeat;
 }
 .attraction__image {
     margin: auto 0;
@@ -295,8 +300,8 @@ p {
 }
 .readlist {
     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(img/book.png);
-    background-position: -10% -5%;
-    background-repeat: repeat-x;
+    background-position: 10% -5%;
+    background-repeat: no-repeat;
 }
 .readlist__item:nth-of-type(1) {
     margin-top: 30px;
