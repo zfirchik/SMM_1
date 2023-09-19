@@ -12,12 +12,7 @@
     src: url(TT_Travels/TTTravels-Medium.woff2) format(woff2),
          url(TT_Travels/TTTravels-Medium.woff) format(woff);
 }
-@font-face {
-    font-family: "DaysOne";
-    font-weight: 400;
-    font-style: normal;
-    src: url(DaysOne-Regular.ttf) format(ttf);
-}
+
 html {
 	overflow-x: hidden;
 }
@@ -75,6 +70,15 @@ body {
     background-color: #f6f6f6;
     box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.10);
 }
+.bordered {
+    margin: 0;
+    border-radius: 13px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 7px 12px rgba(0, 0, 0, 0.10);
+}
+.bordered > p {
+    margin: 18px;
+}
 p {
     color: #0e0e0e;
     margin: 0;
@@ -90,20 +94,24 @@ p {
     margin-top: 150px;
     grid-column: 1 / 13;
 }
-.semi-bold-blue {
-    font-weight: 500;
-    color: #0059DF;
-}
 .semi-bold-red {
     font-weight: 500;
+    color: #DB0D27;
+}
+.red {
     color: #DB0D27;
 }
 .semi-bold {
     font-weight: 500;
 }
-.bold-blue {
-    color: #0059df;
+.italic {
+    font-style: italic;
+}
+.bold {
     font-weight: 700;
+}
+.blue {
+    color: #0059df;
 }
 .bold-red {
     color: #DB0D27;
@@ -121,7 +129,6 @@ p {
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-
 .subject {
     position: relative;
 }
@@ -135,6 +142,28 @@ p {
     font-size: 16px;
     text-align: right;
 }
+nav {
+    margin-top: 50px;
+    background-image: url(img/nav_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 432px;
+}
+.nav-button {
+    margin-top: 80px;
+    margin-bottom: 150px; 
+    width: 400px;
+    border: none;
+    background: none;
+}
+.nav-button-img {
+    width: 100%;
+}
+
+/* SMM 1 */
+
 
 .basics__aside {
     margin-top: auto;
@@ -257,6 +286,7 @@ p {
     grid-column: 1 / 13;
     height: 1px;
     border-bottom: 1px solid #0059DF;
+    margin: 0;
 }
 .analysis__col:nth-of-type(2) {
     position: relative;
@@ -295,8 +325,8 @@ p {
     bottom: 2%;
     right: 1%;
 }
-.table {
-    margin-top: 30px;
+.table__heading {
+    margin-bottom: 30px;
 }
 .readlist {
     background: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url(img/book.png);
@@ -312,22 +342,75 @@ p {
 .readlist__item:nth-of-type(7) {
     line-height: 30px;
 }
-nav {
-    margin-top: 50px;
-    background-image: url(img/nav_bg.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    height: 432px;
+
+/* SMM 2 */
+
+.briefing__col {
+    row-gap: 0px;
+    position: relative;
+    overflow: hidden;
+    line-height: 30px;
+    padding: 10px;
 }
-.nav-button {
-    margin-top: 80px;
-    margin-bottom: 150px; 
-    width: 400px;
-    border: none;
-    background: none;
+.briefing__image {
+    position: absolute;
+    right: 4%;
+    bottom: -10%;
+    transform: rotate(30deg);
 }
-.nav-button-img {
+.briefing__text {
+    grid-column: 1 / 8;
+    padding: auto;
+}
+.briefing__item:first-of-type {
+    margin-top: 0px;
+}
+.briefing__item {
+    margin-top: 30px;
+}
+.sources {
+    margin-top: 30px;   
+}
+.sources__aside {
+    font-weight: 600;
+    color:#0059DF;
+    text-align: right;
+    font-style: italic;
+}
+.table {
+    margin: 0;
     width: 100%;
+    grid-column: 1 / 13;
+}
+.table:first-of-type {
+    margin-bottom: 20px;
+}
+.one-column > .launch__desc {
+    margin-bottom: 15px;
+}
+.launch-bg {
+    background-image: url(img/launch-bg.png);
+    background-repeat: no-repeat;
+    background-position: 80% 90%;
+}
+.launch__info {
+    font-size: 16px;
+    text-align: right;
+}
+
+/* SMM 3 */
+
+.strategy__col-image {
+
+    height: 110%;
+    margin: 0;
+    opacity: 0.5;
+}
+.strategy__col {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+.strategy__col > p {
+    margin: 20px;
 }
